@@ -11,7 +11,7 @@
     font-size: 17px;
 }
 .home{
-    background-image: url("C:/Users/Savan/websiteImg.png");
+    background-image: url('https://raw.githubusercontent.com/sgreen79/sgreen79.github.io/main/websiteImg.png'); 
     background-size: cover;
     background-repeat: no-repeat;
 }
