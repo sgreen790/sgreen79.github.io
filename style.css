@@ -1,0 +1,27 @@
+.nav{
+    background-color:#ffe0e9;
+    overflow: hidden;
+}
+.nav a{
+    color: #b9375e;
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.home{
+    background-image: url("C:/Users/Savan/websiteImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body{
+    font-family:'Raleway';
+}
+h1, h2{
+    color:#b9375e;
+    font-family: 'Lilita One';
+}
+h3{
+    color:#b9375e; 
+}
