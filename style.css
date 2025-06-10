@@ -1,37 +1,337 @@
-.nav{
-    background-color:#ffe0e9;
+.pink_banner{
+    background-color: #e41670;
     overflow: hidden;
-}
-.nav a{
-    color: #b9375e;
-    float: right;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 }
-.home{
-    background-image: url('https://media-hosting.imagekit.io//221508f2b0c7457a/websiteImg.png?Expires=1837196635&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SBvuRbqzAHuS7utVb5pX1JzM50nAK1lFpdCj91BZV-xkzGgMtm4kUVqv8vP9oBnPm~6xBRPx3THCFR82G-g9ov29HjwFeK4aXlMtwpLLmvCATQ9M~UbLkBIc9Ae~K7Xymo7vzhDogaJIwZZ1sXb~UWXm18qg6kEJJo4lSj2niByzewt13I89N9EA1WzzVs2wBUt4BwJ-BoemNHwJG0r1G258jfYjsbBh8S-zChgZWeAOjKTTdVYU0O26BUl9n7TXSAAL8gh-2fItEDs-aSRgYwza2VzUQoozVufZhZl-n6B04QIXYSiAhujiO70sBu~UC7e8UmgFftkr-M~VSNGzZQ__'); 
-    background-size: cover;
+.white_banner{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+}
+.white_banner2{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+    margin-top: 450px;
+}
+.body{
+    background-color: #FFFBFE;
+}
+
+/*slideshow*/
+.slideshow{
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.MySlides img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*navigation Bar*/
+.dropdown-container {
+    position: relative;
+    height: 50px;
+    align-items:center;
+    display: flex;
+}
+.dropdown-container:hover{
+text-decoration: underline;
+}
+
+.subNav {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dropdown-container:hover .dropdown {
+    display: flex;
+}
+
+.dropdown .col a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+    margin-bottom: 8px;
+}
+
+.col a b {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+}
+.navigation a{
+    color: black;
+    text-decoration: none;
+    align-items:center;
+    display: flex;
+}
+.navigation{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 60px;
+}
+/*Shop By Hair Texture homepage*/
+.hide{
+    display: none;
+    margin-top:10px;
+}
+.col2:hover .hide{
+    display:block;
+}
+.col2:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    text-decoration:underline;
+}
+.col2{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 336px;
+    padding: 20px;
+    text-align:center;
+    position: relative;
+    height: 400px;
+    /*aligns text in center H & V*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+.typebtn{
+    background-color:#e41670;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 90px;
+    align-items: center;
+}
+
+.coily-bg{
+    background-image: url("Coily_Model.webp");
+    color: white;
+    background-position: center;
     background-repeat: no-repeat;
 }
-body{
-    font-family:'Raleway';
+.curly-bg{
+    background-image: url("Curly_Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-h1, h2{
-    color:#b9375e;
-    font-family: 'Lilita One';
+.wavy-bg{
+    background-image: url("Wavy-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-h3{
-    color:#b9375e; 
+.straight-bg{
+    background-image: url("Straight-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.links{
-    color:#b9375e;
+/*return home*/
+.return{
+    display: block;
+    margin-left: 500px;
+    margin-right: auto;
+}
+
+/*shop by collection homepage*/
+.collection{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    color: white;
+    float: left; /*align items side by side*/
+    margin-right: 20px;
+    margin-bottom:20px;
+    margin-left: 50px;
+}
+.collection:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.collection a{
+    text-decoration:none;
+    color: white;
+}
+.rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-rm.webp");
     display: flex;
-    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
 }
-.links a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 20px; 
+.ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-ph.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+
+.at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-at.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+
+.sm{
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("collection-sm.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
+}
+.h3{
+    color:#e41670;
+    justify-content: center;
+}
+/*filter products*/
+.filters {
+    float: left;
+    margin-left: 10px;
+}
+.filteredDiv.show {
+    display: block;
+}
+.filteredDiv {
+    display: none;
+}
+/*shampoo page*/
+.shampoo{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 400px;
+    position: relative;
+    float: left;
+    margin: 10px;
+    background-color: black; /* fallback if image fails */
+    margin-left: 100px;
+}
+.shampoo-content {
+    width: 100%;
+    padding: 10p;
+    text-align: center;
+}
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
+}
+
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
+}
+.shampoo-ph {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 30%),
+    url("Pomegranate_honey_shampoo.webp");
+    height: 400px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.shampoo-rm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 30%),
+    url("shampoo-rm.webp");
+    height: 400px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.shampoo-at {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 30%),
+    url("shampoo-at.webp");
+    height: 400px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.shampoo-sm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 30%),
+    url("shampoo-sm.webp");
+    height: 400px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
 }

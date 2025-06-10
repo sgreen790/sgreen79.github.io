@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Mielle Dupe</title>
+    <link rel = "Stylesheet" href="./style.css"/>
+    </head>
+
+    <body class="Shampoos">
+      <div class = "pink_banner">
+            <h2>Download our app for <b>20% OFF</b> your 1st order</h2>
+        </div>
+
+        <div class="navigation">
+            <!--Shop drop down-->
+            <div class = "dropdown-container">
+            <button class ="subNav">Shop</button>
+            <div class = "dropdown">
+            <div class = "col"> 
+                <a href = "#"><b>SHOP BY CATEGORY</b></a>
+                <a href = "shampoo.html">Shampoos & Prepoos</a>
+                <a href = "#">Conditioners & Masques</a>
+                <a href = "#">Gels & Stylers</a>
+                <a href = "#">Oils & Serums</a>
+                <a href = "#">Moistuerizers, Cremes, & Butters</a>
+            </div>
+
+            <div class="col">
+                <a href = "#"><b>HAIR CONCERN</b></a>
+                <a href = "#">Curl Definition</a>
+                <a href = "#">Everyday Essentials</a>
+                <a href = "#">Frizz Reduction</a>
+                <a href = "#">Hair Retention</a>
+                <a href = "#">Hair Strengthening</a>
+                <a href = "#">Heat Protection</a>
+                <a href = "#">Length Retention</a>
+                <a href = "#">Long Lasting Moisture</a>
+                <a href = "#">Protective Styling</a>
+                <a href = "#">Undernourished Hair</a>
+            </div>
+
+            <div class = "col">
+                <a href = "#"><b>HAIR TEXTURE</b></a>
+                <a href = "#">Coily</a>
+                <a href = "#">Curly</a>
+                <a href = "#">Wavy</a>
+                <a href = "#">Straightened</a>
+            </div>
+            </div>
+            </div>
+
+            <!--Collections-->
+            <div class = "dropdown-container">
+            <button class ="subNav">Collections</button>
+            <div class = "dropdown">
+            <div class = "col">
+                <a href = "#"><b>SHOP BY COLLECTION</b></a>
+                <a href = "#">Rosemary Mint</a>
+                <a href = "#">Pomegranate & Honey</a>
+                <a href = "#">Avocado & Tamanu</a>
+                <a href = "#">Sea Moss</a>
+                <a href = "#">All Collections</a>
+            </div>
+            </div>
+            </div>
+            <a href="#AboutUs">About Us</a>
+
+            <!--return home pic-->
+            <div class= "return">
+            <a href="Homepage.html">
+            <img src ="mielle_dupe_logo.jpg" alt="logo" style="width:200px; height: 60px;">
+            </a>
+            </div>
+        </div>
+
+        <!--Filtering-->
+        <div class="filters">
+            <h4><b>FILTERS</b></h4>
+            <p>Product Line</p>
+            <input type="radio" onclick="filterSelection('PH')">Pomegranate & Honey<br>
+            <input type="radio" onclick="filterSelection('RM')">Rosemary Mint<br>
+            <input type="radio" onclick="filterSelection('AT')">Avocado & Tamanu<br>
+            <input type="radio" onclick="filterSelection('SM')">Sea Moss<br>
+            <br> <button onclick="clearFilters()">Clear Filters</button>
+        </div>
+        <script>
+            function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filteredDiv");
+            for (i = 0; i < x.length; i++) {
+                removeClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) {
+                addClass(x[i], "show");
+                }
+            }
+            }
+
+            //show filtered elms
+            function addClass(element, name){
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for(i=0; i<arr2.length; i++){
+                    if(arr1.indexOf(arr2[i])==-1){
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+            //hide elms not selected
+            function removeClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+            }
+            //Clear filters
+            function clearFilters() {
+                // Show all products
+                const x = document.getElementsByClassName("filteredDiv");
+                for (let i = 0; i < x.length; i++) {
+                    addClass(x[i], "show");
+                }
+
+                // Clear all radio buttons
+                const radios = document.querySelectorAll('input[name="productLine"]');
+                radios.forEach(radio => radio.checked = false);
+            }
+
+            // Show all products on page load
+            window.onload = clearFilters; 
+                </script>
+        
+        <!--Product Listings-->
+        <div class = "filteredDiv PH">
+            <div class="shampoo">
+                <div class="shampoo-ph">
+                    <div class="shampoo-content">
+                        <p>Pomegranate & Honey Detangling Shampoo</p>
+                        <select>
+                            <option value="option1">12 oz</option>
+                            <option value="option2">32 oz</option>
+                        </select>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "filteredDiv RM">
+            <div class = shampoo>
+                <div class="shampoo-rm">
+                    <div class="shampoo-content">
+                        <p>Rosemary Mint Strengthening Shampoo</p>
+                        <select>
+                        <option value="option3">3.2 oz</option>
+                        <option value="option1">12 oz</option>
+                        <option value="option2">32 oz</option>
+                        </select>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class = "filteredDiv AT">
+            <div class = shampoo>
+                <div class="shampoo-at">
+                    <div class="shampoo-content">
+                        <p>Avocado & Tamanu Anti-Frizz Shampoo</p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    
+        <div class = "filteredDiv SM">
+            <div class =shampoo>
+                <div class="shampoo-sm">
+                    <div class="shampoo-content">
+                        <p>Sea Moss Shampoo</p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>
