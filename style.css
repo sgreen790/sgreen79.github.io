@@ -1,35 +1,360 @@
-.nav{
-    background-color:#ffe0e9;
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #daf3ff;
+    padding: 5px 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    gap: 5px;
+    box-sizing: border-box;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
 }
 .nav a{
-    color: #b9375e;
-    float: right;
-    padding: 14px 16px;
-    font-size: 17px;
+    color: #0B1D51;
+    padding: 14px 45px;
+    font-size: 20px;
+    text-decoration:none;
+    justify-content: right;
 }
 .home{
-    background-image: url('https://media-hosting.imagekit.io//221508f2b0c7457a/websiteImg.png?Expires=1837196635&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SBvuRbqzAHuS7utVb5pX1JzM50nAK1lFpdCj91BZV-xkzGgMtm4kUVqv8vP9oBnPm~6xBRPx3THCFR82G-g9ov29HjwFeK4aXlMtwpLLmvCATQ9M~UbLkBIc9Ae~K7Xymo7vzhDogaJIwZZ1sXb~UWXm18qg6kEJJo4lSj2niByzewt13I89N9EA1WzzVs2wBUt4BwJ-BoemNHwJG0r1G258jfYjsbBh8S-zChgZWeAOjKTTdVYU0O26BUl9n7TXSAAL8gh-2fItEDs-aSRgYwza2VzUQoozVufZhZl-n6B04QIXYSiAhujiO70sBu~UC7e8UmgFftkr-M~VSNGzZQ__'); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+} 
+.home h1{
+    font-size: 50px;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+    flex-direction: row
+    
+}
+img:not(.screenshot){
+    height: 50px;
+    width: 50px;
+    object-fit:cover;
+    border-radius:50%;
+    justify-content: left;
 }
     body{
-    font-family:'Raleway';
+    font-size:20px;
+    padding-top:70px;
 }
     h1, h2{
-    color:#b9375e;
-    font-family: 'Lilita One';
+    color:#0B1D51;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
     h3{
-    color:#b9375e; 
+    color:#0B1D51; 
 }
     .links{
-    color:#b9375e;
-        display: flex;
+    color:#0B1D51;
+    display: flex;
     gap: 10px;
+    justify-content: left;
 }
 
 .links a {
     text-decoration: none;
     color: inherit;
-    font-size: 20px; 
+    font-size: 30px; 
+}
+body{
+    background-color: #fffbef;
+}
+/*Courses*/
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.course-box {
+    margin-top:10px;
+    background-color: #daf3ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    height: 400px;
+}
+.course-box:hover {
+    transform: translateY(-5px);
+    background-color: #96dafa;
+}
+
+.course-box h2 {
+    margin-top: 0;
+    color: #0B1D51;
+    font-family: 'Gravitas One', serif;
+    font-size: 20px;
+    text-align: center;
+}
+.course-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+.course-box li {
+    margin-bottom: 8px;
+    font-family: serif;
+    line-height: 1.5;
+}
+.courses-description{
+    text-align:center;
+}
+
+/*Experience*/
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.exp-box {
+    margin-top:10px;
+    background-color: #daf3ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    height: 450px;
+}
+.exp-box:hover {
+    transform: translateY(-5px);
+    background-color: #96dafa;
+}
+
+.exp-box h2 {
+    margin-top: 0;
+    color: #0B1D51;
+    font-family: 'Gravitas One', serif;
+    font-size: 20px;
+    text-align: center;
+}
+.exp-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+.exp-box li {
+    margin-bottom: 8px;
+    font-family: serif;
+    line-height: 1.5;
+}
+.work-description{
+    text-align:center;
+}
+
+
+/*skills
+animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%;
+  background-color: #daf3ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.lang, .Tools{
+    width:500px;
+}
+
+.skills {
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 10px;
+  color: #fffbef;
+  border-radius: 8px;
+}
+.skill-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+
+.HTML {width: 80%; background-color: #0B1D51; animation:HTML 3s;} 
+.CSS {width: 80%; background-color: #0B1D51; animation:CSS 3s;} 
+.JS {width: 70%; background-color: #0B1D51; animation:JS 3s;} 
+.java {width: 80%; background-color: #0B1D51; animation:java 3s;} 
+.c {width: 40%; background-color: #0B1D51; animation:c 3s;}
+.python {width: 60%; background-color: #0B1D51; animation:python 3s;}
+.git {width: 90%; background-color: #0B1D51; animation:git 3s;} 
+.MS {width: 100%; background-color: #0B1D51; animation:MS 3s;}
+.github {width: 80%; background-color: #0B1D51; animation:github 3s;}
+.gitlab {width: 50%; background-color: #0B1D51; animation:gitlab 3s;} 
+.eclipse {width: 60%; background-color: #0B1D51; animation:eclipse 3s;} 
+.WP {width: 40%; background-color:#0B1D51; animation:WP 3s;}
+
+/*animates experience bar*/
+@keyframes HTML{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes CSS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes JS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:70%;
+    }}
+@keyframes java{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes c{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }}
+@keyframes python{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%;
+    }}
+@keyframes git{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:90%;
+    }}
+@keyframes MS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%;
+    }}
+@keyframes github{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes gitlab{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:50%;
+    }}
+@keyframes eclipse{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%;
+    }}
+@keyframes WP{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }}
+/*Projects*/
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+img.screenshot {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto;
+}
+
+.prj-box {
+    margin-top:10px;
+    background-color: #daf3ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    height: 450px;
+    width: 450px;
+}
+.prj-box:hover {
+    transform: translateY(-5px);
+    background-color: #96dafa;
+}
+
+.prj-box h2 {
+    margin-top: 0;
+    color: #0B1D51;
+    font-family: 'Gravitas One', serif;
+    font-size: 20px;
+    text-align: center;
+}
+.prj-box a, p{
+    color: #0B1D51;
+    font-family:serif;
+    text-align:center;
+    text-decoration: none; 
+}
+.prj-description{
+    text-align:center;
+}
+.button {
+  background-color: #0B1D51;
+  color: #fffbef;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
 }
