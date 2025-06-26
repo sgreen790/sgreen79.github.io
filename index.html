@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
     <title>Savannah Green</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -21,38 +24,52 @@
     <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:d6edfb1f-1f40-4450-a7db-d7a405fe8bef">Resume</a>
     <a href="projects.html">Projects</a>
     </div>
-    <h1 id="intro"></h1>
-        <div class="links">
-        <a href="https://www.linkedin.com/in/savannah-green-b77b01234/">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/sgreen790">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:savgreen118@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a> 
-    </div>
-    <p>I am a recent Towson University Computer Science grad and an aspiring web developer. I am currently looking for jobs in:</p>
-    <ul> 
-        <li>Front End Web Development</li>
-        <li>Full Stack Web Development</li>
-        <li>Software Engineering</li>
-        <li>Data Analytics</li>
-    </ul>
-    <script>
-var i = 0;
-var txt = 'Hi, I am Savannah Green';
-var speed = 50;
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("intro").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-window.onload = typeWriter;
-    </script>
+    <!--card sliding animation-->
+    <div class ="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <img src="headshot.jpg" alt="headshot" class="img-slide">
+                </div>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="content">
+                <!--TypeWriter animation-->
+                <script>
+                var i = 0;
+                var txt = 'Hi, I am Savannah Green';
+                var speed = 50;
+                function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("intro").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+                }
+                window.onload = typeWriter;
+                </script>
+                <h1 id="intro"></h1>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/savannah-green-b77b01234/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sgreen790">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:savgreen118@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a> 
+                    <p>I am a recent Towson University Computer Science grad and an aspiring web developer. I am currently looking for jobs in:</p>
+                    <ul> 
+                        <li>Front End Web Development</li>
+                        <li>Full Stack Web Development</li>
+                        <li>Software Engineering</li>
+                        <li>Data Analytics</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
