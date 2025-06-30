@@ -1,3 +1,4 @@
+/*-----------------------------------NAVIGATION----------------------------------------*/
 .nav {
     display: flex;
     align-items: center;
@@ -12,17 +13,48 @@
     box-sizing: border-box;
     height: 60px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:15px;
 }
 .nav-links {
     display: flex;
     gap: 25px;
 }
-.nav a{
+.nav a, h3{
     color: #0B1D51;
-    padding: 14px 45px;
+    padding: 14px 40px;
     font-size: 20px;
     text-decoration:none;
     justify-content: right;
+    font-family: serif;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #0B1D51;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*Prodile picture*/
+.headshot:not(.screenshot){
+    height: 50px;
+    width: 50px;
+    object-fit:cover;
+    border-radius:50%;
+    justify-content: left;
 }
 .home{
     display: flex;
@@ -33,144 +65,134 @@
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0;
-} 
-.home h1{
-    font-size: 50px;
-    font-family: "Gravitas One", serif;
-    font-weight: 400;
-    font-style: normal;
 }
-.name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 100vh;
-    flex-direction: row
-    
-}
-img:not(.screenshot){
-    height: 50px;
-    width: 50px;
-    object-fit:cover;
-    border-radius:50%;
-    justify-content: left;
-}
-    body{
+body{
     font-size:20px;
     padding-top:70px;
+    background-color: #fffbef;
 }
-    h1, h2{
+h1, h2{
     color:#0B1D51;
     font-family: "Gravitas One", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
 }
-    h3{
+h3,ul{
     color:#0B1D51; 
-}
-    .links{
-    color:#0B1D51;
-    display: flex;
-    gap: 10px;
-    justify-content: left;
 }
 
 .links a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 30px; 
-}
-body{
-    background-color: #fffbef;
-}
-/*Courses*/
-.courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
+  display: inline-block;
+  padding: 15px;
+  color: #0B1D51;
+  font-size: 20px;
+  text-decoration: none;
+  gap:5px;
 }
 
-.course-box {
-    margin-top:10px;
-    background-color: #daf3ff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
-    height: 400px;
-}
-.course-box:hover {
-    transform: translateY(-5px);
-    background-color: #96dafa;
+/*main image and intro*/
+.hero {
+  position: relative;
+  width: 85%;
+  height: 100vh;
+  background: url('headshot.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
 }
 
-.course-box h2 {
-    margin-top: 0;
-    color: #0B1D51;
-    font-family: 'Gravitas One', serif;
-    font-size: 20px;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex-end;
+  justify-content: center;
+  padding-top:150px;
+}
+
+#intro {
+  color: #fffbef;
+  font-size: 3em;
+  font-family: 'Gravitas One', serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  justify-content:center;
+  padding-left: 40px;
+}
+/*About me text*/
+.about p, li{
+    margin-bottom:4px;
+    margin-top:2px;
+    justify-content:center;
+    display:flex;
+}
+/*------------------------------------------------------Courses-------------------------------------------------*/
+.courses{
+    color:#0B1D51;
+}
+.courses h2 {
+    font-family:'Gravitas One', serif;
+    display:flex;
+    justify-content:center;
+}
+.courses ul {
+    font-family: serif;
     text-align: center;
 }
-.course-box ul {
-    padding-left: 20px;
-    margin: 0;
+.pulse {
+  animation: pulse 1.2s infinite;
+  display: flex;
+  justify-content: center;
+  height:100px;
+  width:100px;
 }
-.course-box li {
-    margin-bottom: 8px;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*---------------------------------------------------------Experience----------------------------------------------------*/
+.experience{
+    color:#0B1D51;
+}
+.experience h2 {
+    font-family:'Gravitas One', serif;
+    display:flex;
+    justify-content:center;
+}
+.experience ul {
     font-family: serif;
-    line-height: 1.5;
-}
-.courses-description{
-    text-align:center;
-}
-
-/*Experience*/
-.experience {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
-
-.exp-box {
-    margin-top:10px;
-    background-color: #daf3ff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
-    height: 450px;
-}
-.exp-box:hover {
-    transform: translateY(-5px);
-    background-color: #96dafa;
-}
-
-.exp-box h2 {
-    margin-top: 0;
-    color: #0B1D51;
-    font-family: 'Gravitas One', serif;
-    font-size: 20px;
     text-align: center;
 }
-.exp-box ul {
-    padding-left: 20px;
-    margin: 0;
+.pulse {
+  animation: pulse 1.2s infinite;
+  display: flex;
+  justify-content: center;
+  height:100px;
+  width:100px;
 }
-.exp-box li {
-    margin-bottom: 8px;
-    font-family: serif;
-    line-height: 1.5;
-}
-.work-description{
-    text-align:center;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
-/*skills
+/*-----------------------------------------------------------------------skills------------------------------------------------------------
 animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
 * {box-sizing:border-box}
 
@@ -211,11 +233,34 @@ animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
 .git {width: 90%; background-color: #0B1D51; animation:git 3s;} 
 .MS {width: 100%; background-color: #0B1D51; animation:MS 3s;}
 .github {width: 80%; background-color: #0B1D51; animation:github 3s;}
-.gitlab {width: 50%; background-color: #0B1D51; animation:gitlab 3s;} 
 .eclipse {width: 60%; background-color: #0B1D51; animation:eclipse 3s;} 
 .WP {width: 40%; background-color:#0B1D51; animation:WP 3s;}
+.sql {width: 40%; background-color:#0B1D51; animation:sql 3s;}
+.canva {width: 90%; background-color:#0B1D51; animation:canva 3s;}
+.VS{width: 90%; background-color:#0B1D51; animation:VS 3s;}
 
 /*animates experience bar*/
+@keyframes VS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:90%;
+    }}
+@keyframes canva{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:90%;
+    }}
+@keyframes sql{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }}
 @keyframes HTML{
     0%{
         width:0%;
@@ -279,13 +324,6 @@ animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
     100%{
         width:80%;
     }}
-@keyframes gitlab{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:50%;
-    }}
 @keyframes eclipse{
     0%{
         width:0%;
@@ -300,8 +338,8 @@ animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
     100%{
         width:40%;
     }}
-/*Projects*/
-.project {
+/*----------------------------------------------------------Projects---------------------------------------------------------------------*/
+.projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -314,6 +352,7 @@ img.screenshot {
   object-fit: contain;
   display: block;
   margin: 10px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .prj-box {
@@ -323,8 +362,12 @@ img.screenshot {
     padding: 20px;
     border-radius: 12px;
     transition: transform 0.2s ease;
-    height: 450px;
-    width: 450px;
+    height: 510px;
+    width: 400px;
+}
+.prj-box p{
+    margin-top:4px;
+    margin-bottom:2px;
 }
 .prj-box:hover {
     transform: translateY(-5px);
@@ -347,14 +390,46 @@ img.screenshot {
 .prj-description{
     text-align:center;
 }
-.button {
-  background-color: #0B1D51;
-  color: #fffbef;
+/*buttons*/
+.btn {
   padding: 10px 20px;
+  margin: 10px;
   border: none;
-  border-radius: 8px;
-  text-decoration: none;
+  cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
-  display: inline-block;
+  transition: all 0.3s ease;
+}
+/* 3. Border Reveal */
+.btn-border-reveal {
+  background-color: transparent;
+  color: #0B1D51;
+  border: 2px solid #0B1D51;
+  position: relative;
+}
+
+.btn-border-reveal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0B1D51;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-border-reveal:hover::after {
+  width: 100%;
+}
+
+.btn-border-reveal:hover {
+  color: white;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
