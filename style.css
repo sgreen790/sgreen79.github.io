@@ -1,435 +1,736 @@
-/*-----------------------------------NAVIGATION----------------------------------------*/
-.nav {
+.pink_banner{
+    background-color: #e41670;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+.white_banner{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+}
+.white_banner2{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+    margin-top: 450px;
+}
+.body{
+    background-color: #FFFBFE;
+}
+
+/*slideshow*/
+.slideshow{
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.MySlides img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*navigation Bar*/
+.dropdown-container {
+    position: relative;
+    height: 50px;
+    align-items:center;
+    display: flex;
+}
+.dropdown-container:hover{
+text-decoration: underline;
+}
+
+.subNav {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dropdown-container:hover .dropdown {
+    display: flex;
+}
+
+.dropdown .col a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+    margin-bottom: 8px;
+}
+
+.col a b {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+}
+.navigation a{
+    color: black;
+    text-decoration: none;
+    align-items:center;
+    display: flex;
+}
+.navigation{
+    background-color: white;
     display: flex;
     align-items: center;
-    background-color: #daf3ff;
-    padding: 5px 10px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    gap: 5px;
-    box-sizing: border-box;
+    gap: 40px;
     height: 60px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom:15px;
 }
-.nav-links {
+/*Shop By Hair Texture homepage*/
+.hide{
+    display: none;
+    margin-top:10px;
+}
+.col2:hover .hide{
+    display:block;
+}
+.col2:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    text-decoration:underline;
+}
+.col2{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 336px;
+    padding: 20px;
+    text-align:center;
+    position: relative;
+    height: 400px;
+    /*aligns text in center H & V*/
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    float: left;
 }
-.nav a, h3{
-    color: #0B1D51;
-    padding: 14px 40px;
-    font-size: 20px;
-    text-decoration:none;
-    justify-content: right;
-    font-family: serif;
-}
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: #0B1D51;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-/*Prodile picture*/
-.headshot:not(.screenshot){
+.typebtn{
+    background-color:#e41670;
+    color: white;
+    border: none;
     height: 50px;
-    width: 50px;
-    object-fit:cover;
-    border-radius:50%;
-    justify-content: left;
+    width: 90px;
+    align-items: center;
 }
-.home{
+
+.coily-bg{
+    background-image: url("images/Coily_Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.curly-bg{
+    background-image: url("images/Curly_Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wavy-bg{
+    background-image: url("images/Wavy-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.straight-bg{
+    background-image: url("images/Straight-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*return home*/
+.return{
+    display: block;
+    margin-left: 500px;
+    margin-right: auto;
+}
+
+/*shop by collection homepage*/
+.collection{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    color: white;
+    float: left; /*align items side by side*/
+    margin-right: 20px;
+    margin-bottom:20px;
+    margin-left: 50px;
+}
+.collection:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.collection a{
+    text-decoration:none;
+    color: white;
+}
+.rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("images/collection-rm.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
+}
+.ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("images/collection-ph.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+
+.at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("images/collection-at.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+
+.sm{
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("images/collection-sm.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
+}
+.h3{
+    color:#e41670;
+    justify-content: center;
+}
+/*filter products*/
+.filters {
+    float: left;
+    margin-left: 10px;
+}
+.filteredDiv.show {
+    display: block;
+}
+.filteredDiv {
+    display: none;
+}
+/*shampoo page*/
+.shampoo-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
+}
+.shampoo {
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+}
+
+.shampoo-content {
+    width: 100%;
+    text-align: center;
+    margin:1px;
+}
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
+}
+
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
+}
+.shampoo-ph {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.shampoo-rm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/shampoo-rm.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.shampoo-at {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/shampoo-at.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.shampoo-sm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/shampoo-sm.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns children to the bottom */
+}
+.return {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-size: cover;
+    margin-left:350px;
+    margin-top: 70px;
+}
+
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
+    text-align: center;
+}
+
+
+/*conditoner*/
+.conditioner-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
+}
+.conditioner-phli{
+    background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/PH_LeaveIn.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
 }
-body{
-    font-size:20px;
-    padding-top:70px;
-    background-color: #fffbef;
+.conditioner-ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/PH_conditioner.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
 }
-h1, h2{
-    color:#0B1D51;
-    font-family: "Gravitas One", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
+.conditioner-rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/rm-conditioner.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
 }
-h3,ul{
-    color:#0B1D51; 
+.rm-leavein{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/rm_leavein.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
+}
+.conditioner-at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/AT-conditioner.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
+}
+.at-leavein{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/at-leavein.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
+}
+.sm-conditioner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/sm-conditioner.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
+}
+.sm-leavein{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/sm-leavein.webp");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end; 
+}
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 70px;
 }
 
-.links a {
-  display: inline-block;
-  padding: 15px;
-  color: #0B1D51;
-  font-size: 20px;
-  text-decoration: none;
-  gap:5px;
-}
-
-/*main image and intro*/
-.hero {
-  position: relative;
-  width: 85%;
-  height: 100vh;
-  background: url('headshot.jpg') center center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: flex-end;
-  justify-content: center;
-  padding-top:150px;
-}
-
-#intro {
-  color: #fffbef;
-  font-size: 3em;
-  font-family: 'Gravitas One', serif;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-  justify-content:center;
-  padding-left: 40px;
-}
-/*About me text*/
-.about p, li{
-    margin-bottom:4px;
-    margin-top:2px;
-    justify-content:center;
-    display:flex;
-}
-/*------------------------------------------------------Courses-------------------------------------------------*/
-.courses{
-    color:#0B1D51;
-}
-.courses h2 {
-    font-family:'Gravitas One', serif;
-    display:flex;
-    justify-content:center;
-}
-.courses ul {
-    font-family: serif;
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
     text-align: center;
 }
-.pulse {
-  animation: pulse 1.2s infinite;
-  display: flex;
-  justify-content: center;
-  height:100px;
-  width:100px;
+/*stylers*/
+.styler-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
 }
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.styler{
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+}
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
+}
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
 }
 
-/*---------------------------------------------------------Experience----------------------------------------------------*/
-.experience{
-    color:#0B1D51;
+.stylers-ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
 }
-.experience h2 {
-    font-family:'Gravitas One', serif;
-    display:flex;
-    justify-content:center;
+.stylers-rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
 }
-.experience ul {
-    font-family: serif;
+.stylers-at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 70px;
+}
+
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
     text-align: center;
 }
-.pulse {
-  animation: pulse 1.2s infinite;
-  display: flex;
-  justify-content: center;
-  height:100px;
-  width:100px;
+/*butters*/
+.styler-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
 }
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.styler{
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
 }
-
-
-/*-----------------------------------------------------------------------skills------------------------------------------------------------
-animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
-* {box-sizing:border-box}
-
-/* Container for skill bars */
-.container {
-  width: 100%;
-  background-color: #daf3ff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
 }
-.lang, .Tools{
-    width:500px;
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
 }
 
-.skills {
-  height: 20px;
-  line-height: 20px;
-  text-align: right;
-  padding-right: 10px;
-  color: #fffbef;
-  border-radius: 8px;
+.stylers-ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
 }
-.skill-wrap{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 70px;
-  flex-wrap: wrap;
-  padding: 40px;
+.stylers-rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
 }
-
-
-.HTML {width: 80%; background-color: #0B1D51; animation:HTML 3s;} 
-.CSS {width: 80%; background-color: #0B1D51; animation:CSS 3s;} 
-.JS {width: 70%; background-color: #0B1D51; animation:JS 3s;} 
-.java {width: 80%; background-color: #0B1D51; animation:java 3s;} 
-.c {width: 40%; background-color: #0B1D51; animation:c 3s;}
-.python {width: 60%; background-color: #0B1D51; animation:python 3s;}
-.git {width: 90%; background-color: #0B1D51; animation:git 3s;} 
-.MS {width: 100%; background-color: #0B1D51; animation:MS 3s;}
-.github {width: 80%; background-color: #0B1D51; animation:github 3s;}
-.eclipse {width: 60%; background-color: #0B1D51; animation:eclipse 3s;} 
-.WP {width: 40%; background-color:#0B1D51; animation:WP 3s;}
-.sql {width: 40%; background-color:#0B1D51; animation:sql 3s;}
-.canva {width: 90%; background-color:#0B1D51; animation:canva 3s;}
-.VS{width: 90%; background-color:#0B1D51; animation:VS 3s;}
-
-/*animates experience bar*/
-@keyframes VS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:90%;
-    }}
-@keyframes canva{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:90%;
-    }}
-@keyframes sql{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:40%;
-    }}
-@keyframes HTML{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes CSS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes JS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:70%;
-    }}
-@keyframes java{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes c{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:40%;
-    }}
-@keyframes python{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:60%;
-    }}
-@keyframes git{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:90%;
-    }}
-@keyframes MS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:100%;
-    }}
-@keyframes github{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes eclipse{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:60%;
-    }}
-@keyframes WP{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:40%;
-    }}
-/*----------------------------------------------------------Projects---------------------------------------------------------------------*/
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
+.stylers-at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
 }
-img.screenshot {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 10px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 70px;
 }
 
-.prj-box {
-    margin-top:10px;
-    background-color: #daf3ff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
-    height: 510px;
-    width: 400px;
-}
-.prj-box p{
-    margin-top:4px;
-    margin-bottom:2px;
-}
-.prj-box:hover {
-    transform: translateY(-5px);
-    background-color: #96dafa;
-}
-
-.prj-box h2 {
-    margin-top: 0;
-    color: #0B1D51;
-    font-family: 'Gravitas One', serif;
-    font-size: 20px;
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
     text-align: center;
 }
-.prj-box a, p{
-    color: #0B1D51;
-    font-family:serif;
-    text-align:center;
-    text-decoration: none; 
-}
-.prj-description{
-    text-align:center;
-}
-/*buttons*/
-.btn {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-/* 3. Border Reveal */
-.btn-border-reveal {
-  background-color: transparent;
-  color: #0B1D51;
-  border: 2px solid #0B1D51;
-  position: relative;
-}
 
-.btn-border-reveal::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #0B1D51;
-  transition: width 0.3s ease;
-  z-index: -1;
+/*Rosemary and mint*/
+.RM-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
 }
-
-.btn-border-reveal:hover::after {
-  width: 100%;
+.RM{
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
 }
-
-.btn-border-reveal:hover {
-  color: white;
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
 }
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
+}
+.regular{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/RM_Oil.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.light{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/RM-Light-Oil.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.leavein{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/RM-Light-Oil.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 70px;
+}
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
+    text-align: center;
 }

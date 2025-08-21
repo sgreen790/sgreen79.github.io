@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mielle Clone</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+
+    <body class = "homepage">
+        <div class = "pink_banner">
+            <h2>Download our app for <b>20% OFF</b> your 1st order</h2>
+        </div>
+
+        <div class="navigation">
+            <!--Shop drop down-->
+            <div class = "dropdown-container">
+            <button class ="subNav">Shop</button>
+            <div class = "dropdown">
+            <div class = "col"> 
+                <a href = "#"><b>SHOP BY CATEGORY</b></a>
+                <a href = "shampoo.html">Shampoos & Prepoos</a>
+                <a href = "conditioner.html">Conditioners</a>
+                <a href = "stylers.html">Gels & Stylers</a>
+                <a href = "butters.html">Moistuerizers, Cremes, & Butters</a>
+            </div>
+
+            <div class="col">
+                <a href = "definiton.html"><b>HAIR CONCERN</b></a>
+                <a href = "#">Curl Definition</a>
+                <a href = "#">Everyday Essentials</a>
+                <a href = "#">Frizz Reduction</a>
+                <a href = "#">Hair Retention</a>
+                <a href = "#">Hair Strengthening</a>
+                <a href = "#">Heat Protection</a>
+                <a href = "#">Length Retention</a>
+                <a href = "#">Long Lasting Moisture</a>
+                <a href = "#">Protective Styling</a>
+                <a href = "#">Undernourished Hair</a>
+            </div>
+
+            <div class = "col">
+                <a href = "#"><b>HAIR TEXTURE</b></a>
+                <a href = "#">Coily</a>
+                <a href = "#">Curly</a>
+                <a href = "#">Wavy</a>
+                <a href = "#">Straightened</a>
+            </div>
+            </div>
+            </div>
+
+            <!--Collections-->
+            <div class = "dropdown-container">
+            <button class ="subNav">Collections</button>
+            <div class = "dropdown">
+            <div class = "col">
+                <a href = "#"><b>SHOP BY COLLECTION</b></a>
+                <a href = "#">Rosemary Mint</a>
+                <a href = "#">Pomegranate & Honey</a>
+                <a href = "#">Avocado & Tamanu</a>
+                <a href = "#">Sea Moss</a>
+                <a href = "#">All Collections</a>
+            </div>
+            </div>
+            </div>
+            <a href="#AboutUs">About Us</a>
+        </div>
+
+        </div>
+            <!--photo slidehow-->
+            <div class = "slideshow">
+                <div class = "Myslides">
+                <img src="images/slideshow1.webp">
+                </div>
+
+                <div class = "Myslides">
+                    <img src="images/slideshow2.webp" style="width:100">
+                </div>
+
+                <div class = "Myslides">
+                    <img src="images/slideshow3.webp">
+                </div>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides(){
+                let i;
+                let slides = document.getElementsByClassName("Myslides");
+                for(i=0; i<slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if(slideIndex > slides.length){slideIndex =1;} //loop
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 2000); //changes img rate
+            }
+        </script>
+        <div class="white_banner">
+            <h2>SHOP BY HAIR TEXTURE</h2>
+        </div>
+        <!--Shop By Hair Texture homepage-->
+        <div class="col2 coily-bg">
+            <h3>COILY</h3>
+            <p class = "hide">Products made for type 4 hair</p>
+            <div class="hide"><button class="typebtn" onclick="document.location='coily.html'">Shop Coily</button></div>
+        </div>
+
+         <div class="col2 curly-bg">
+            <h3>CURLY</h3>
+            <p class = "hide">Products made for type 3 hair</p>
+            <div class="hide"><button class="typebtn" onclick="document.location='curly.html'">Shop Curly</button></div>
+        </div>
+
+        <div class="col2 wavy-bg">
+            <h3>WAVY</h3>
+            <p class = "hide">Products made for type 2 hair</p>
+            <div class="hide"><button class="typebtn" onclick="document.location='wavy.html'">Shop Wavy</button></div>
+        </div>
+
+         <div class="col2 straight-bg">
+            <h3>STRAIGHTENED</h3>
+            <p class = "hide">Products to help straigten hair</p>
+            <div class="hide"><button class="typebtn" onclick="document.location='straightened.html'">Shop Straightened</button></div>
+        </div>
+
+        <!--shop by collection homepage-->
+        <div class="white_banner2">
+            <h2>SHOP BY COLLECTION</h2>
+        </div>
+        <div class = "collection rm">
+            <a href = "RM.html">ROSEMARY & MINT</a>
+        </div>
+        <div class = "collection ph">
+            <a href = "PH.html">POMEGRANATE & HONEY</a>
+        </div>
+        <div class = "collection at">
+            <a href = "AT.html">AVOCADO & TAMANU</a>
+            </div>
+        <div class = "collection sm">
+            <a href = "SM.html">SEA MOSS</a>
+        </div>
+    </body>
+</html>
